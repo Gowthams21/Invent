@@ -1,0 +1,15 @@
+<div class="filter-container">
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <input matInput (input)="onCategoryChange($event)">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Stock Level</mat-label>
+    <mat-select (selectionChange)="onStockChange($event)">
+      <mat-option value="">All</mat-option>
+      <mat-option value="low">Low</mat-option>
+      <mat-option value="high">High</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

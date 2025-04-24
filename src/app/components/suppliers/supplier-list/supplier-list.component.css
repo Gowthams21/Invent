@@ -1,0 +1,27 @@
+/* supplier-list.component.css */
+.table-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container mat-table {
+    width: 100%;
+  }
+  
+  .table-container mat-header-cell,
+  .table-container mat-cell {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .table-container .mat-button {
+    background-color: #d32f2f;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .table-container .mat-button:hover {
+    background-color: #b71c1c;
+  }

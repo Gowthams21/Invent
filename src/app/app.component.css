@@ -1,0 +1,7 @@
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+  }
+  .active {
+    background-color: #ffffff33;
+  }
