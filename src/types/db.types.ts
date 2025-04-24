@@ -1,6 +1,6 @@
 import { RowDataPacket } from 'mysql2';
 
-export interface InventoryItem extends RowDataPacket {
+export interface InventoryItem {
   id: number;
   name: string;
   category: string;
@@ -9,9 +9,13 @@ export interface InventoryItem extends RowDataPacket {
   created_at: Date;
 }
 
-export interface Supplier extends RowDataPacket {
+export interface Supplier {
   id: number;
   name: string;
+  email: string | null;
+  phone: string | null;
   contact: string | null;
   created_at: Date;
 }
+
+export { RowDataPacket }; 

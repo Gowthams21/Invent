@@ -10,7 +10,10 @@ import {
 
 const router = Router();
 
-router.get('/', getAllInventory);
+router.get('/', (req, res) => {
+  console.log('GET /api/inventory called');
+  getAllInventory(req, res);
+});
 router.get('/:id', getInventoryById);
 router.post('/', createInventory);
 router.put('/:id', updateInventory);
