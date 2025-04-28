@@ -1,15 +1,19 @@
-<div class="filter-container">
-  <mat-form-field>
+<div class="filters">
+  <mat-form-field appearance="fill">
     <mat-label>Category</mat-label>
-    <input matInput (input)="onCategoryChange($event)">
+    <mat-select [(value)]="selectedCategory" (selectionChange)="onCategoryChange()">
+      <mat-option *ngFor="let category of categories" [value]="category">
+        {{ category | titlecase }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field appearance="fill">
     <mat-label>Stock Level</mat-label>
-    <mat-select (selectionChange)="onStockChange($event)">
-      <mat-option value="">All</mat-option>
-      <mat-option value="low">Low</mat-option>
-      <mat-option value="high">High</mat-option>
+    <mat-select [(value)]="selectedStock" (selectionChange)="onStockChange()">
+      <mat-option *ngFor="let level of stockLevels" [value]="level">
+        {{ level | titlecase }}
+      </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
